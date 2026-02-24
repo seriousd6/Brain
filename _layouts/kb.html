@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<article class="kb-article">
+  <header class="kb-header">
+    <h1>{{ page.title }}</h1>
+
+    {% if page.tags %}
+      <p class="meta"><strong>Tags:</strong> {{ page.tags | join: ", " }}</p>
+    {% endif %}
+
+    {% if page.depth %}
+      <p class="meta"><strong>Depth:</strong> {{ page.depth }}</p>
+    {% endif %}
+
+    {% if page.created or page.updated %}
+      <p class="meta">
+        {% if page.created %}<strong>Created:</strong> {{ page.created }}{% endif %}
+        {% if page.updated %} · <strong>Updated:</strong> {{ page.updated }}{% endif %}
+      </p>
+    {% endif %}
+
+    {% if page.related %}
+      <p class="meta"><strong>Related (slugs):</strong> {{ page.related | join: ", " }}</p>
+    {% endif %}
+  </header>
+
+  {{ content }}
+</article>

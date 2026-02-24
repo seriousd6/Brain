@@ -1,0 +1,34 @@
+title: AI Brain Wiki
+description: Personal technical knowledge base (atomic Markdown articles with strong cross-links)
+
+# If this is a project site (user.github.io/repo), set baseurl: "/repo"
+# If this is a user/org site (user.github.io), leave baseurl empty.
+url: ""
+baseurl: ""
+
+permalink: pretty
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# GitHub Pages supports rewriting relative links during build; keep your .md-style links.
+relative_links:
+  enabled: true
+
+# Apply defaults to knowledge-base pages under /kb
+defaults:
+  - scope:
+      path: "kb"
+      type: "pages"
+    values:
+      layout: "kb"
+      # Makes kb/article.md render at /kb/article/
+      permalink: /kb/:basename/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
