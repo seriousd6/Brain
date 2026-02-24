@@ -3,7 +3,7 @@ description: Personal technical knowledge base (atomic Markdown articles with st
 
 # If this is a project site (user.github.io/repo), set baseurl: "/repo"
 # If this is a user/org site (user.github.io), leave baseurl empty.
-url: ""
+url: "https://seriousd6.github.io"
 baseurl: "/Brain"
 
 permalink: pretty
