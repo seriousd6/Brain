@@ -1,0 +1,55 @@
+title: "Brain"
+description: "A personal, AI-powered wiki of curated topics."
+url: "https://seriousd6.github.io"
+baseurl: "/Brain"
+
+theme: minima
+
+author:
+  name: seriousd6
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections for wiki sections
+collections:
+  tech:
+    output: true
+    permalink: /:collection/:name/
+  notes:
+    output: true
+    permalink: /:collection/:name/
+  ideas:
+    output: true
+    permalink: /:collection/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "tech"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "ideas"
+    values:
+      layout: "page"
+
+# Exclude files from the built site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
